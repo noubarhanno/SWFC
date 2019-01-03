@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Registration Details</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    {% if user.is_authenticated %}
+    <a href="{% url 'logout' %}" class="btn btn-outline-danger">Logout</a>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">First Name</th>
+          <th scope="col">Last Name</th>
+          <th scope="col">Email Address</th>
+          <th scope="col">Contact Number</th>
+          <th scope="col">Interest</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for Registration in RegistrationList%}
+        <tr>
+          <th scope="row">{{Registration.First_Name}}</th>
+          <td>{{Registration.Last_Name}}</td>
+          <td>{{Registration.Email_Address}}</td>
+          <td>{{Registration.Mobile_Number}}</td>
+          <td>{{Registration.Intereset}}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    {% endif %}
+  </body>
+</html>

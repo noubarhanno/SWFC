@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<title>Sharjah Waterfront City - Home Page</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="autor" content="Noubar Jack Hanno">
+<meta name="keywards" content="Sharjah , Waterfront City , Appartments , Villas , Sea, Views, Developments">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/v4-shims.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+{# MEDIUM STYLE EDITOR#}
+<script src="//cdn.jsdelivr.net/medium-editor/latest/js/medium-editor.min.js"></script>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/medium-editor/latest/css/medium-editor.min.css" type="text/css" media="screen" charset="utf-8">
+<link rel="stylesheet" href="{% static 'css/Registration.css'%}">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+body, html {
+    height: 100%;
+    line-height: 1.8;
+}
+/* Full height image header */
+.bgimg-1 {
+    background-position: center;
+    background-size: cover;
+    background-image: url("{%static 'media/Picture01.png'%}");
+    min-height: 100%;
+}
+.w3-bar .w3-button {
+    padding: 16px;
+}
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href="#home" class="w3-bar-item w3-button w3-wide"><i class="fas fa-home"></i></a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <a href="#Project" class="w3-bar-item w3-button" style="text-decoration:none"><i class="fas fa-project-diagram"></i> Project</a>
+      <a href="#Samples" class="w3-bar-item w3-button" style="text-decoration:none"><i class="fa fa-th"></i> Samples</a>
+      <a href="#Info" class="w3-bar-item w3-button" style="text-decoration:none"><i class="fas fa-info"></i> Info</a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="#Project" onclick="w3_close()" class="w3-bar-item w3-button">Project</a>
+  <a href="#Samples" onclick="w3_close()" class="w3-bar-item w3-button">Samples</a>
+  <a href="#Info" onclick="w3_close()" class="w3-bar-item w3-button">Info</a>
+</nav>
+
+<!-- Header with full-height image -->
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+  <!-- <div class="container">
+      <form class="box w3-display-middle" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type='submit' class="w3-button w3-black w3-right w3-section" value='Register'>
+          <p style="text-align:justify;width:250px">By submitting your details via this online form you agree to be contacted via email / phone / SMS, by Azizi Development, We do not share your personal details with third parties.</p>
+      </form>
+  </div> -->
+  <div class="inner-container w3-card-4 w3-display-middle w3-animate-opacity">
+    <form class="box" method="post">
+      <h1>Contact Request</h1>
+      {% csrf_token %}
+      {% for field in form %}
+      {{ field }}
+      {% endfor %}
+      <input type='submit' id='btnsubmit' value='Register'>
+    </form>
+  </div>
+  <!-- <script>var editor = new MediumEditor('.editable');</script> -->
+</header>
+
+<!-- Team Section -->
+<div class="w3-container" style="padding:128px 16px" id="Project">
+  <h3 class="w3-center w3-dark-gray">PROJECT</h3>
+  <p class="w3-center w3-large">Details about the Project</p>
+  <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="{%static 'media/Picture05.jpg'%}" alt="John" style="width:100%;height:170px">
+        <div class="w3-container">
+          <h3>Sun Island</h3>
+          <p class="w3-opacity">Villas</p>
+          <p>Sun Island’s 321 villas like gems adorn the surface of the Island, carefully packed to give the residents a new kind of luxury <br><br><br><br></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="{%static 'media/Picture07.jpg'%}" alt="Jane" style="width:100%;height:170px">
+        <div class="w3-container">
+          <h3>BlueBay Walk</h3>
+          <p class="w3-opacity">Towers</p>
+          <p>6 residential and commercial towers consisting of a range of luxury apartments of different types and sizes (studio, 1 BR, 2 BR) within a fully serviced environment.<br><br><br></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="{%static 'media/Picture06.jpg'%}" alt="Mike" style="width:100%;height:170px">
+        <div class="w3-container">
+          <h3>BlueBay Walk</h3>
+          <p class="w3-opacity">Restaurants</p>
+          <p>There are also restaurants, cafes and retail outlets for the finest brands to form an integrated community with charming beach views, while the entire project will be delivered in the last quarter of 2020<br><br></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="{%static 'media/Picture10.jpg'%}" alt="Dan" style="width:100%;height:170px">
+        <div class="w3-container">
+          <h3>BlueBay Walk</h3>
+          <p class="w3-opacity">Appartments</p>
+          <p>The project includes 600 high-end smart apartments, all of which have a beach view that offers a unique living experience. Facilities accompanying the project include green gardens, swimming pools, various shops.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Work Section -->
+<div class="w3-container" style="padding:128px 16px" id="Samples">
+  <h3 class="w3-center w3-dark-gray">Samples</h3>
+  <p class="w3-center w3-large">Samples about the Project</p>
+
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-col l3 m6">
+      <img src="{%static 'media/Picture02.gif'%}" style="width:100%;height:180px" onclick="onClick(this)" class="w3-hover-opacity" alt="Sharjah Waterfront City">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="{%static 'media/Picture03.jpg'%}" style="width:100%;height:180px" onclick="onClick(this)" class="w3-hover-opacity" alt="Sharjah Waterfront City">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="{%static 'media/Picture04.jpg'%}" style="width:100%;height:180px" onclick="onClick(this)" class="w3-hover-opacity" alt="Sharjah Waterfront City">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="{%static 'media/Picture05.jpg'%}" style="width:100%;height:180px" onclick="onClick(this)" class="w3-hover-opacity" alt="Sharjah Waterfront City">
+    </div>
+  </div>
+
+  <div class="w3-row-padding w3-section">
+    <div class="w3-col l3 m6">
+      <img src="{%static 'media/Picture09.jpg'%}" style="width:100%;height:180px" onclick="onClick(this)" class="w3-hover-opacity" alt="Sharjah Waterfront City">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="{%static 'media/Picture10.jpg'%}" style="width:100%;height:180px" onclick="onClick(this)" class="w3-hover-opacity" alt="Sharjah Waterfront City">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="{%static 'media/Picture11.jpg'%}" style="width:100%;height:180px" onclick="onClick(this)" class="w3-hover-opacity" alt="Sharjah Waterfront City">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="{%static 'media/Picture12.jpg'%}" style="width:100%;height:180px" onclick="onClick(this)" class="w3-hover-opacity" alt="Sharjah Waterfront City">
+    </div>
+  </div>
+</div>
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+
+<!-- About Section -->
+<div class="w3-container" style="padding:128px 16px" id="Info">
+  <h1 class="w3-center w3-dark-gray">Info</h1><br>
+  <p class="w3-center w3-large">Key features of the Project</p>
+  <div class="w3-row-padding w3-center" style="margin-top:64px">
+    <div class="w3-quarter">
+      <i class="fa fa-globe w3-margin-bottom w3-jumbo w3-center"></i>
+      <p class="w3-large">Overview</p>
+      <p>Sharjah Waterfront City, an incredible collection of eight beautifully
+        designed islands visible from the outer space, is one of the most vibrant
+        mixed-use developments in Sharjah in the making that will reshape the landscape
+        of the area and create a new city on the coast of the Arabian Gulf.
+      </p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fas fa-map-marker-alt w3-margin-bottom w3-jumbo w3-center"></i>
+      <p class="w3-large">Location</p>
+      <p>Sharjah Waterfront City, located on the Arabian Gulf coastline in the middle
+         of the seven UAE emirates like a precious diamond at the center of a necklace.
+      </p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fas fas fa-route w3-margin-bottom w3-jumbo w3-center"></i>
+      <p class="w3-large">Route</p>
+      <p>Easily accessible from Dubai International, Sharjah International
+         and Ras Al Khaimah, Mohammed Bin Zayed Road and Emirates Road (by pass)
+          Sharjah Waterfront City is also close to five major ports
+           Hamriyah, Ajman, Umm Al Quwain, Ras Al Khaimah and Port of Fujairah.
+      </p>
+    </div>
+    <div class="w3-quarter">
+      <i class="far fa-eye w3-margin-bottom w3-jumbo w3-center"></i>
+      <p class="w3-large">Views</p>
+      <p>The views outside the villas and apartments are a combination of open and verdant beaches stretching
+         to form a beauty verse that captures its splendor with 40% of the project area, as 60% of the area is
+          landscaped with green beaches, green gardens and service areas, ensuring the building of a healthy and
+           respectful society
+      </p>
+    </div>
+  </div>
+</div>
+
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <p>Powered by <a href="https://linkedin.com/in/noubar-hanno" title="W3.CSS" target="_blank" class="w3-hover-text-green"><i class="fa fa-linkedin"></i></a></p>
+</footer>
+
+<!-- Add Google Maps -->
+<script>
+
+//to insure the Input is Numnbers
+function isNumberKey(evt){
+    var charCode = (evt.which) ? evt.which : event.keyCode
+    if (charCode > 31 && (charCode < 48 || charCode > 57))
+        return false;
+    return true;
+}
+
+//to prevent Copy and Paste into field
+window.onload = function() {
+ const myInput = document.getElementById('MobileNumber');
+ myInput.onpaste = function(e) {
+   e.preventDefault();
+ }
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+    if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+    } else {
+        mySidebar.style.display = 'block';
+    }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+<!--
+To use this code on your website, get a free API key from Google.
+Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+-->
+{% block content %}
+{% endblock %}
+</body>
+</html>

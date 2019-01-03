@@ -1,0 +1,80 @@
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+    height: 100%;
+    color: #777;
+    line-height: 1.8;
+}
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+        background-attachment: scroll;
+    }
+}
+.inner-container{
+  min-width:600px;
+  height:600px;
+  position:absolute;
+  top:20%;
+  left:50%;
+  overflow:hidden;
+}
+.box{
+  position:absolute;
+  min-height:600px;
+  min-width:600px;
+  font-family:Helvetica;
+  color:#fff;
+  background:rgba(213, 223, 239,0.25);
+  padding:30px 0px;
+}
+/* .box button{
+  background:#742ECC;
+  border:0;
+  color:#fff;
+  padding:10px;
+  font-size:20px;
+  width:330px;
+  margin:20px auto;
+  display:block;
+  cursor:pointer;
+}
+.box button:active{
+  background:#27ae60;
+}
+.box p{
+  font-size:14px;
+  text-align:center;
+}
+.box p span{
+  cursor:pointer;
+  color:#666;
+}
+.box h1{
+  text-align:center;
+  margin:20px 0;
+  font-size:30px;
+}
+/* .box input{
+  display:block;
+  width:300px;
+  margin:5px auto;
+  padding:5px;
+  background:rgba(0,0,0,0.9);
+  color:#fff;
+  border:1px solid red;
+} */
+/* .box input:focus,.box input:active,.box button:focus,.box button:active{
+  outline:none;
+} */ 

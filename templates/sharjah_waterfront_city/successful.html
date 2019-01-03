@@ -1,0 +1,13 @@
+{% extends 'sharjah_waterfront_city/index.html' %}
+{% block content %}
+    <div id="id01" class="w3-modal" style="z-index:4;display:block">
+      <div class="w3-modal-content w3-animate-zoom">
+        <div class="w3-container w3-padding w3-blue">
+           <a href="{% url 'Create_Registration' %}"><span class="w3-button w3-right w3-xxlarge"><i class="fa fa-remove"></i></span></a>
+          <h2 align="center">Thank you for Regestering your Intereset with us</h2>
+          <h3 align="center">We'll be contacting you soon for more details!</h3>
+        </div>
+      </div>
+    </div>
+  </body>
+{% endblock %}
